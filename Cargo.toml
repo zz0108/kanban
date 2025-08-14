@@ -1,0 +1,13 @@
+[package]
+name = "kanban-tui"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+ratatui = "0.28"
+crossterm = "0.27"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+chrono = { version = "0.4", features = ["serde"] }
+uuid = { version = "1.0", features = ["v4", "serde"] }
+rusqlite = { version = "0.32", features = ["chrono", "uuid", "bundled"] }
