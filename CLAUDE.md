@@ -9,6 +9,15 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - `cargo check` - Check for compilation errors without building
 - `cargo build --release` - Build optimized release version
 - `cargo test` - Run unit tests (currently minimal test coverage)
+- `cargo test [TESTNAME]` - Run specific tests matching the name pattern
+- `cargo fmt` - Format code using rustfmt
+- `cargo fmt --check` - Check if code is formatted (useful for CI)
+- `cargo clippy` - Run Clippy linter for code quality checks
+- `cargo clippy --fix` - Automatically fix clippy suggestions
+- `cargo install --path .` - Install the `kanban` command globally (must be run in project directory)
+- `kanban` - Run the installed application (after installation)
+- `./target/release/kanban` - Run the locally built binary (Unix/Linux/macOS)
+- `.\target\release\kanban.exe` - Run the locally built binary (Windows)
 
 ## Architecture Overview
 
@@ -75,6 +84,8 @@ This requires careful coordination between Board, Column operations and UI selec
 **TUI Framework**: Built on `ratatui` with `crossterm` backend for cross-platform terminal handling. UI rendering is stateless and purely functional.
 
 **Input Modes**: The application has distinct input modes (`Normal`, `Editing`, `AddingTask`, `MovingTask`) that completely change key binding behavior. Mode transitions are managed centrally in the App struct.
+
+**Development Standards**: The codebase follows standard Rust conventions. Use `cargo fmt` to maintain consistent formatting and `cargo clippy` to catch common mistakes and improve code quality before committing changes.
 
 ## Critical Implementation Details
 

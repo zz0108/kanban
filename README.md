@@ -15,10 +15,26 @@ A terminal-based Kanban board application built with Rust and ratatui.
 
 Make sure you have Rust installed, then:
 
+### Method 1: Install globally
 ```bash
 git clone <your-repo>
-cd Kanban
+cd kanban
+cargo install --path .
+```
+
+After installation, run anywhere with:
+```bash
+kanban
+```
+
+### Method 2: Build and run locally
+```bash
+git clone <your-repo>
+cd kanban
 cargo build --release
+./target/release/kanban  # On Unix/Linux/macOS
+# Or on Windows:
+.\target\release\kanban.exe
 ```
 
 ## Development Commands
@@ -31,7 +47,13 @@ cargo build --release
 
 ## Usage
 
-Run the application:
+After installation, run the application:
+
+```bash
+kanban
+```
+
+Or during development:
 
 ```bash
 cargo run

@@ -6,7 +6,9 @@
       "Bash(cargo:*)",
       "Bash(taskkill:*)",
       "WebSearch",
-      "Bash(rm:*)"
+      "Bash(rm:*)",
+      "Bash(kanban:*)",
+      "Bash(find:*)"
     ],
     "defaultMode": "acceptEdits"
   }
